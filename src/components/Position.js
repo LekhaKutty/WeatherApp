@@ -16,8 +16,8 @@ class Position extends React.Component {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => {
                 this.setState({
-                    lat: position.coords.latitude.toFixed(0),
-                    lng: position.coords.longitude.toFixed(0),
+                    lat: position.coords.latitude.toFixed(2),
+                    lng: position.coords.longitude.toFixed(2),
                     isLoaded: true
                 });
             },(error) =>{
